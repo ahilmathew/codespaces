@@ -17,3 +17,7 @@ If you have an application (example - nodejs express server) running inside code
 * You should be able to see the `Ports` tab.
 * You add the port your application is running on to the list. For example 3000
 * Now you should be able to access the application on `localhost:3000` from your machine.
+
+# Limitation
+
+* Cannot run docker containers inside the codespaces created here.
