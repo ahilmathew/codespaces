@@ -1,21 +1,23 @@
 # Use the official Codespaces image
-FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
+FROM mcr.microsoft.com/devcontainers/base:alpine
 
 # Install Java 11
-RUN sudo apt-get update \
-    && sudo apt-get install -y openjdk-11-jdk \
-    python3 python3-pip
+RUN apk add --no-cache openjdk11
+
+# Install Python and pip
+RUN apk add --no-cache python3 py3-pip
 
 # Install Node.js and npm
-RUN curl -sL https://deb.nodesource.com/setup_$(lsb_release -cs).x | sudo -E bash - \
-    && sudo apt-get install -y nodejs
+RUN apk add --no-cache nodejs npm
 
 # Install Yarn
-RUN sudo npm install -g yarn
+RUN npm install -g yarn
 
 # Install pnpm
-RUN sudo npm install -g pnpm
+RUN npm install -g pnpm
 
 # Install PostgreSQL
-# RUN sudo apt-get install -y postgresql
+RUN apk add --no-cache postgresql
 
+# Switch back to non-root user
+# USER vscode
