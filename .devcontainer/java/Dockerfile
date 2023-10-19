@@ -21,9 +21,3 @@ RUN npm install -g pnpm
 
 # Install PostgreSQL
 RUN apk add --no-cache postgresql
-
-# Create the 'codespace' user
-RUN adduser -D codespace
-
-# Switch to 'codespace' user
-USER codespace

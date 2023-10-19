@@ -1,20 +1,28 @@
 {
-    "name": "Java 11, Python, Node.js, PostgreSQL Codespace",
-    "dockerFile": "Dockerfile",
-    "extensions": [
-      "vscjava.vscode-java-pack",
-      "ms-python.python",
-      "dbaeumer.vscode-eslint",
-      "ms-azuretools.vscode-docker",
-      "redhat.vscode-yaml",
-      "visualstudioexptteam.vscodeintellicode",
-      "waderyan.nodejs-extension-pack"
-    ],
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/zsh"
-    },
-    "forwardPorts": [5432],
-    "postCreateCommand": "echo 'Post create steps go here'",
-    "remoteUser": "codespace"
+  "name": "Java 11, Python, Node.js, PostgreSQL Codespace",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "ms-python.python",
+    "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-yaml",
+    "visualstudioexptteam.vscodeintellicode",
+    "waderyan.nodejs-extension-pack",
+    "ms-vscode-remote.remote-containers"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  },
+  "forwardPorts": [
+    5432
+  ],
+  "postCreateCommand": "echo 'Post create steps go here'",
+  "remoteUser": "root",
+"features": {
+	"ghcr.io/cirolosapio/devcontainers-features/alpine-docker-outside-of-docker:0": {}
   }
-  
+}
