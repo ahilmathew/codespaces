@@ -11,7 +11,7 @@
       "waderyan.nodejs-extension-pack"
     ],
     "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
+      "terminal.integrated.shell.linux": "/bin/zsh"
     },
     "forwardPorts": [5432],
     "postCreateCommand": "echo 'Post create steps go here'",

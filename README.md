@@ -18,6 +18,8 @@ If you have an application (example - nodejs express server) running inside code
 * You add the port your application is running on to the list. For example 3000
 * Now you should be able to access the application on `localhost:3000` from your machine.
 
+You can also add a list of forwarded ports inside the `forwardPorts` array in `devcontainer.json` file. This will ensure that the ports are forwarded when codespaces starts up.
+
 # How do I add VSCode extensions
 
 * Check the `extensions` inside `devcontainer.json`.
