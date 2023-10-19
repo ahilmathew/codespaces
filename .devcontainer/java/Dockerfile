@@ -19,5 +19,8 @@ RUN npm install -g pnpm
 # Install PostgreSQL
 RUN apk add --no-cache postgresql
 
-# Switch back to non-root user
-# USER vscode
+# Create the 'codespace' user
+RUN adduser -D codespace
+
+# Switch to 'codespace' user
+USER codespace
