@@ -9,7 +9,6 @@
 * Select the instance capacity size.
 * Visual Studio Code will now open a new window connecting to the Codespace. This may take a few moments as it creates and configures the environment based on the devcontainer.json file.
 
-
 # Forwarding a process running in codespaces to your local machine.
 
 If you have an application (example - nodejs express server) running inside codespaces and you want to access the application from your local machine then follow the below steps - 
@@ -24,7 +23,6 @@ You can also add a list of forwarded ports inside the `forwardPorts` array in `d
 
 * Check the `extensions` inside `devcontainer.json`.
 * Add the extension id of any vscode extensions you want. Codespaces will have that when you spin it up.
-
 
 # Limitation
 

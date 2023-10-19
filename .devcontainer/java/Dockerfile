@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/devcontainers/base:alpine
 RUN apk add --no-cache openjdk11
 
 # Install Zsh
-RUN apk add --no-cache zsh
+RUN apk add --no-cache zsh git
 
 # Install Python and pip
 RUN apk add --no-cache python3 py3-pip
