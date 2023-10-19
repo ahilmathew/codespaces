@@ -18,6 +18,12 @@ If you have an application (example - nodejs express server) running inside code
 * You add the port your application is running on to the list. For example 3000
 * Now you should be able to access the application on `localhost:3000` from your machine.
 
+# How do I add VSCode extensions
+
+* Check the `extensions` inside `devcontainer.json`.
+* Add the extension id of any vscode extensions you want. Codespaces will have that when you spin it up.
+
+
 # Limitation
 
 * Cannot run docker containers inside the codespaces created here.
