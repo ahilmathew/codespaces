@@ -26,4 +26,4 @@ You can also add a list of forwarded ports inside the `forwardPorts` array in `d
 
 # Limitation
 
-* Cannot run docker containers inside the codespaces created here.
+* To use docker containers inside codespaces docker needs to be running on the host machine.
