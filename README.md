@@ -14,14 +14,15 @@
 If you have an application (example - nodejs express server) running inside codespaces and you want to access the application from your local machine then follow the below steps - 
 * Open up the VSCode panel inside codespaces - Press Ctrl+J (Windows/Linux) or Cmd+J (Mac). This keyboard shortcut toggles the visibility of the panel.
 * You should be able to see the `Ports` tab.
-* You add the port your application is running on to the list. For example 3000
+* Add the port your application is running onto the list. For example 3000.
 * Now you should be able to access the application on `localhost:3000` from your machine.
 
 You can also add a list of forwarded ports inside the `forwardPorts` array in `devcontainer.json` file. This will ensure that the ports are forwarded when codespaces starts up.
 
-If you are running docker containers, VSCode automatically forwards that port to your local machine.
+If you are running docker containers, VSCode automatically forwards that port to your local machine. You should a little notification inside vscode when you run the docker container with port forwarding.
 
 # How do I add VSCode extensions
 
 * Check the `extensions` inside `devcontainer.json`.
 * Add the extension id of any vscode extensions you want. Codespaces will have that when you spin it up.
+
