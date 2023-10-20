@@ -22,7 +22,11 @@
   ],
   "postCreateCommand": "echo 'Post create steps go here'",
   "remoteUser": "root",
-"features": {
-	"ghcr.io/cirolosapio/devcontainers-features/alpine-docker-outside-of-docker:0": {}
-  }
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "20.10",
+			"enableNonRootDocker": "true",
+			"moby": "false"
+		}
+	}
 }
