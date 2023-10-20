@@ -19,11 +19,9 @@ If you have an application (example - nodejs express server) running inside code
 
 You can also add a list of forwarded ports inside the `forwardPorts` array in `devcontainer.json` file. This will ensure that the ports are forwarded when codespaces starts up.
 
+If you are running docker containers, VSCode automatically forwards that port to your local machine.
+
 # How do I add VSCode extensions
 
 * Check the `extensions` inside `devcontainer.json`.
 * Add the extension id of any vscode extensions you want. Codespaces will have that when you spin it up.
-
-# Limitation
-
-* To use docker containers inside codespaces docker needs to be running on the host machine.
