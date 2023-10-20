@@ -1,17 +1,16 @@
-# Use the official Codespaces image
-FROM mcr.microsoft.com/devcontainers/base:alpine
+# Use the Microsoft Dev Containers base image
+FROM mcr.microsoft.com/devcontainers/base:bullseye
 
 # Install Java 11
-RUN apk add --no-cache openjdk11
-
-# Install Zsh
-RUN apk add --no-cache zsh git
+RUN apt-get update && \
+    apt-get install -y openjdk-11-jdk
 
 # Install Python and pip
-RUN apk add --no-cache python3 py3-pip
+RUN apt-get install -y python3 python3-pip
 
 # Install Node.js and npm
-RUN apk add --no-cache nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs
 
 # Install Yarn
 RUN npm install -g yarn
@@ -20,4 +19,14 @@ RUN npm install -g yarn
 RUN npm install -g pnpm
 
 # Install PostgreSQL
-RUN apk add --no-cache postgresql
+RUN apt-get install -y postgresql
+
+# Install Zsh
+RUN apt-get install -y zsh
+
+# Set the default shell to Zsh
+# RUN chsh -s /usr/bin/zsh codespace
+RUN chsh -s /usr/bin/zsh root
+
+# Switch back to non-root user
+# USER codespace
